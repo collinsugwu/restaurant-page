@@ -1,4 +1,5 @@
 import { nav, heroText } from './landingpage';
+import menu from './menu';
 
 
 let header = document.createElement('header');
@@ -15,4 +16,6 @@ document.querySelector('.menu').addEventListener('click', () => {
   let heroTextParentNode = heroTextDiv.parentNode;
   heroTextParentNode.removeChild(heroTextDiv);
   let content = document.getElementById('content');
+
+  content.appendChild(menu());
 });

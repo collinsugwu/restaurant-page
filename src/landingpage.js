@@ -9,9 +9,6 @@ const nav = () => {
  <ul class="main-nav">
    <li><a href="#" class="home">Home</a></li>
    <li><a href="#" class="menu">Menu</a></li>
-   <li><a href="#">Our cities</a></li>
-   <li><a href="#">Your cities</a></li>
-   <li><a href="#">Sign Up</a></li>
  </ul>`
   navBar.appendChild(navDiv);
   return navBar;
