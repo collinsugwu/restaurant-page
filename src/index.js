@@ -10,12 +10,17 @@ content.appendChild(header);
 let parentNode = document.querySelector('header').parentNode;
 parentNode.insertBefore(heroText(), header.nextSibling);
 
-document.querySelector('.menu').addEventListener('click', () => {
+
+const deleteDomElement = () => {
   parentNode.removeChild(header);
   let heroTextDiv = document.querySelector('.hero-text-box');
   let heroTextParentNode = heroTextDiv.parentNode;
   heroTextParentNode.removeChild(heroTextDiv);
-  let content = document.getElementById('content');
+};
 
+document.querySelector('.menu').addEventListener('click', () => {
+  deleteDomElement();
+  let content = document.getElementById('content');
   content.appendChild(menu());
 });
+
