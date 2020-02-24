@@ -1,8 +1,7 @@
 const menu = () => {
-  let section = document.createElement('section');
+  const section = document.createElement('section');
   section.setAttribute('class', 'section-meals');
-  section.innerHTML =
-    `
+  section.innerHTML = `
     <ul class="meals-showcase">
     <li>
         <figure class="meal-photo">
@@ -48,8 +47,8 @@ const menu = () => {
     </li>
 </ul>
 
- `
- return section;
+ `;
+  return section;
 };
 
 export default menu;

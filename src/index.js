@@ -6,7 +6,7 @@ const content = document.getElementById('content');
 
 header.appendChild(nav());
 content.appendChild(header);
-const parentNode = document.querySelector('header').parentNode;
+const { parentNode } = document.querySelector('header');
 parentNode.insertBefore(heroText(), header.nextSibling);
 
 
@@ -22,4 +22,3 @@ document.querySelector('.menu').addEventListener('click', () => {
   const content = document.getElementById('content');
   content.appendChild(menu());
 });
-
