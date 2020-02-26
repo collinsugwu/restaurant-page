@@ -145,7 +145,7 @@ h2:after {
 .main-nav li a:link,
 .main-nav li a:visited {
     text-decoration: none;
-    color: #fff;
+    color: #f39c12;
     font-size: .8rem;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
@@ -210,4 +210,12 @@ h2:after {
 .meal-photo img:hover {
     opacity: 1;
     transform: scale(1.03);
+}
+
+/*contact*/
+
+.section-contact {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
 }

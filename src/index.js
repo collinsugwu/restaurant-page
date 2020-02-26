@@ -1,5 +1,6 @@
 import { nav, heroText } from './landingpage';
 import menu from './menu';
+import contact from './contact';
 
 const header = document.createElement('header');
 const content = document.getElementById('content');
@@ -9,16 +10,38 @@ content.appendChild(header);
 const { parentNode } = document.querySelector('header');
 parentNode.insertBefore(heroText(), header.nextSibling);
 
-
 const deleteDomElement = () => {
-  parentNode.removeChild(header);
-  const heroTextDiv = document.querySelector('.hero-text-box');
-  const heroTextParentNode = heroTextDiv.parentNode;
-  heroTextParentNode.removeChild(heroTextDiv);
+  content.innerHTML = '';
 };
 
-document.querySelector('.menu').addEventListener('click', () => {
-  deleteDomElement();
-  const content = document.getElementById('content');
-  content.appendChild(menu());
-});
+function home() {
+  document.querySelector('.home').addEventListener('click', () => {
+    window.location.reload();
+  });
+}
+
+function menuButton() {
+  document.querySelector('.menu').addEventListener('click', () => {
+    deleteDomElement();
+    const content = document.getElementById('content');
+    content.appendChild(nav());
+    content.appendChild(menu());
+    contactButton();
+    home();
+  });
+}
+
+function contactButton() {
+  document.querySelector('.contact').addEventListener('click', () => {
+    deleteDomElement();
+    const content = document.getElementById('content');
+    content.appendChild(nav());
+    content.appendChild(contact());
+    menuButton();
+    home();
+  });
+}
+
+
+menuButton();
+contactButton();

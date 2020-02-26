@@ -6,9 +6,10 @@ const nav = () => {
   navDiv.setAttribute('class', 'row');
   navDiv.innerHTML = `
  <img src="img/logo-white.png" alt="logo" class="logo">
- <ul class="main-nav">
+ <ul class="main-nav float-right">
    <li><a href="#" class="home">Home</a></li>
    <li><a href="#" class="menu">Menu</a></li>
+   <li><a href="#" class="contact">Contact</a></li>
  </ul>`;
   navBar.appendChild(navDiv);
   return navBar;

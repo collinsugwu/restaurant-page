@@ -2,7 +2,7 @@ const menu = () => {
   const section = document.createElement('section');
   section.setAttribute('class', 'section-meals');
   section.innerHTML = `
-    <ul class="meals-showcase">
+    <ul class="meals-showcase float-right">
     <li>
         <figure class="meal-photo">
             <img src="img/1.jpg" alt="fist meal">
